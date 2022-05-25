@@ -1,0 +1,13 @@
+<seed>
+	<service name="notify-service">
+		<table name="notify_template">
+			<record externalId="oms-notice-upload-error-email">
+				<field name="id" primary="true"></field>
+				<field name="sending_type" unique="true">email</field>
+				<field name="is_predefined">1</field>
+				<field name="send_setting_code" unique="true">oms-notice-upload-error-email</field>
+				<field name="content"><![CDATA[上传订单失败： ${message}]]></field>
+			</record>
+		</table>
+	</service>
+</seed>

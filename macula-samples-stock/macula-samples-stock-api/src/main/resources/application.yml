@@ -1,0 +1,35 @@
+spring:
+  redis:
+    host: 10.87.140.81
+    port: 6381
+    password: redis%%sccdev321
+    database: 8
+  cloud:
+    stream:
+      rocketmq:
+        binder:
+          name-server: 10.87.132.63:9876;10.87.132.64:9876;10.87.132.65:9876
+          access-key: motest01
+          secret-key: motest01
+      default-binder: rocketmq
+      bindings:
+        stock-output:
+          group: GID_MO_TEST
+          destination: TOPIC_MO_TEST
+          content-type: application/json
+macula:
+  cloud:
+    security:
+      oauth2_login: true
+      public-urls: /**
+      jwt-key: choerodon
+security:
+  oauth2:
+    client:
+      client-id: client
+      client-secret: secret
+      access-token-uri: ${OAUTH_SERVER}/oauth/token
+      user-authorization-uri: ${OAUTH_SERVER}/oauth/authorize
+    resource:
+      user-info-uri: ${OAUTH_SERVER}/api/user
+      token-info-uri: ${OAUTH_SERVER}/oauth/check_token

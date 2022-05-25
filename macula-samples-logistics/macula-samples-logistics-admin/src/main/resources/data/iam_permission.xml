@@ -1,0 +1,78 @@
+<seed>
+	<service name="base-service">
+		<table name="iam_permission">
+			<record externalId="buildrun.route.top.logistics_mgt">
+				<field name="id" primary="true"></field>
+				<field name="code" unique="true">buildrun.route.top.logistics_mgt</field>
+				<field name="path">/logistics_mgt</field>
+				<field name="service_code">logistics-service</field>
+				<field name="resource_level">site</field>
+				<field name="description">物流中心路由</field>
+				<field name="permission_type">page</field>
+				<field name="is_public_access">0</field>
+				<field name="is_login_access">0</field>
+				<field name="is_within">0</field>
+			</record>
+			<record externalId="buildrun.route.menu.logistics_settings">
+				<field name="id" primary="true"></field>
+				<field name="code" unique="true">buildrun.route.menu.logistics_settings</field>
+				<field name="path">/logistics_settings</field>
+				<field name="service_code">logistics-service</field>
+				<field name="resource_level">site</field>
+				<field name="description">物流配置路由</field>
+				<field name="permission_type">page</field>
+				<field name="is_public_access">0</field>
+				<field name="is_login_access">0</field>
+				<field name="is_within">0</field>
+			</record>
+			<record externalId="buildrun.route.menu_item.logistics_address">
+				<field name="id" primary="true"></field>
+				<field name="code" unique="true">buildrun.route.menu_item.logistics_address</field>
+				<field name="path">/logistics/address</field>
+				<field name="service_code">scc-service</field>
+				<field name="resource_level">site</field>
+				<field name="description">物流配送地区路由</field>
+				<field name="permission_type">page</field>
+				<field name="is_public_access">0</field>
+				<field name="is_login_access">0</field>
+				<field name="is_within">0</field>
+			</record>
+			<record externalId="buildrun.route.top.logistics_mgt">
+				<field name="id" primary="true"></field>
+				<field name="code" unique="true">buildrun.route.top.logistics_mgt</field>
+				<field name="path">/logistics_mgt</field>
+				<field name="service_code">logistics-service</field>
+				<field name="resource_level">site</field>
+				<field name="description">物流中心路由</field>
+				<field name="permission_type">page</field>
+				<field name="is_public_access">0</field>
+				<field name="is_login_access">0</field>
+				<field name="is_within">0</field>
+			</record>
+			<record externalId="buildrun.route.menu.logistics_address_settings">
+				<field name="id" primary="true"></field>
+				<field name="code" unique="true">buildrun.route.menu.logistics_address_settings</field>
+				<field name="path">/logistics_address_settings</field>
+				<field name="service_code">macula-samples-logistics-admin</field>
+				<field name="resource_level">site</field>
+				<field name="description">菜鸟地址管理</field>
+				<field name="permission_type">page</field>
+				<field name="is_public_access">0</field>
+				<field name="is_login_access">0</field>
+				<field name="is_within">0</field>
+			</record>
+			<record externalId="buildrun.route.menu_item.logistics_address_version">
+				<field name="id" primary="true"></field>
+				<field name="code" unique="true">buildrun.route.menu_item.logistics_address_version</field>
+				<field name="path">/address/version</field>
+				<field name="service_code">macula-samples-logistics-admin</field>
+				<field name="resource_level">site</field>
+				<field name="description">菜鸟地址版本</field>
+				<field name="permission_type">page</field>
+				<field name="is_public_access">0</field>
+				<field name="is_login_access">0</field>
+				<field name="is_within">0</field>
+			</record>
+		</table>
+	</service>
+</seed>

@@ -1,0 +1,43 @@
+spring:
+  datasource:
+    druid:
+      initial-size: 0
+      max-active: 8
+      min-idle: 0
+      time-between-eviction-runs-millis: 60000
+      time-between-connect-error-millis: 500
+      min-evictable-idle-time-millis: 1800000
+      max-evictable-idle-time-millis: 25200000
+  jpa:
+    open-in-view: false
+  redis:
+    redisson:
+      config: classpath:redisson.yml
+  cloud:
+    circuit:
+      breaker:
+        enabled: true
+    loadbalancer:
+      retry:
+        enabled: true
+feign:
+  hystrix:
+    enabled: true
+  config:
+    default:
+      connect-timeout: 10000
+      read-timeout: 10000
+ribbon:
+  read-timeout: 60000
+  connect-timeout: 60000
+hystrix:
+  share-security-context: true
+  command:
+    default:
+      circuit-breaker:
+        sleep-window-in-milliseconds: 100000
+        force-closed: true
+      execution:
+        isolation:
+          thread:
+            timeout-in-milliseconds: 600000

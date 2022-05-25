@@ -1,0 +1,12 @@
+<seed>
+    <service name="notify-service">
+        <table name="notify_send_setting_category">
+            <record externalId="oms-notice">
+                <field name="id" primary="true"></field>
+                <field name="code" unique="true">oms-notice</field>
+                <field name="name">OMS告警</field>
+                <field name="description">OMS告警</field>
+            </record>
+        </table>
+    </service>
+</seed>

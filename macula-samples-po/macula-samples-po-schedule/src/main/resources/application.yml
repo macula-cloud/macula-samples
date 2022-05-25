@@ -1,0 +1,19 @@
+server:
+  port: 7082
+management:
+  server:
+    port: 9082
+spring:
+  application:
+    name: macula-samples-po-schedule
+macula:
+  cloud:
+    # OAuth2
+    security:
+      oauth2_login: true
+      jwt-key: choerodon
+    # SAP
+    sap:
+      name: scmp-sap
+      packages:
+        - org.macula.cloud.po

@@ -1,0 +1,86 @@
+<seed>
+	<service name="base-service">
+		<table name="iam_menu_b">
+			<record externalId="buildrun.top.logistics_mgt">
+				<field name="id" primary="true"></field>
+				<field name="code" unique="true">buildrun.top.logistics_mgt</field>
+				<field name="page_permission_code">buildrun.route.top.logistics_mgt</field>
+				<field name="type" unique="true">top</field>
+				<field name="name" language="zh_CN">物流中心</field>
+				<field name="name" language="en_US">Logistics Management</field>
+				<field name="name">物流中心</field>
+				<field name="sort">100</field>
+				<field name="parent_id">0</field>
+				<field name="parent_code"></field>
+				<field name="is_default">1</field>
+				<field name="service_code">logistics-service</field>
+				<field name="icon">circulate</field>
+				<field name="resource_level">site</field>
+			</record>
+			<record externalId="buildrun.menu.logistics_settings">
+				<field name="id" primary="true"></field>
+				<field name="code" unique="true">buildrun.menu.logistics_settings</field>
+				<field name="page_permission_code">buildrun.route.menu.logistics_settings</field>
+				<field name="type" unique="true">menu</field>
+				<field name="name" language="zh_CN">配置</field>
+				<field name="name" language="en_US">Settings</field>
+				<field name="name">配置</field>
+				<field name="sort">1</field>
+				<field name="parent_id" ref="base-service.iam_menu_b.buildrun.top.logistics_mgt:id"></field>
+				<field name="parent_code" ref="base-service.iam_menu_b.buildrun.top.logistics_mgt:code"></field>
+				<field name="is_default">1</field>
+				<field name="service_code">logistics-service</field>
+				<field name="icon">settings</field>
+				<field name="resource_level">site</field>
+			</record>
+			<record externalId="buildrun.menu_item.logistics_address">
+				<field name="id" primary="true"></field>
+				<field name="code" unique="true">buildrun.menu_item.logistics_address</field>
+				<field name="page_permission_code">buildrun.route.menu_item.logistics_address</field>
+				<field name="type" unique="true">menu_item</field>
+				<field name="name" language="zh_CN">物流配送地区</field>
+				<field name="name" language="en_US">Logistics Address</field>
+				<field name="name">物流配送地区</field>
+				<field name="sort">1</field>
+				<field name="parent_id" ref="base-service.iam_menu_b.buildrun.menu.logistics_settings:id"></field>
+				<field name="parent_code" ref="base-service.iam_menu_b.buildrun.menu.logistics_settings:code"></field>
+				<field name="is_default">1</field>
+				<field name="service_code">logistics-service</field>
+				<field name="icon">local_shipping</field>
+				<field name="resource_level">site</field>
+			</record>
+			<record externalId="buildrun.menu.logistics_address_settings">
+				<field name="id" primary="true"></field>
+				<field name="code" unique="true">buildrun.menu.logistics_address_settings</field>
+				<field name="page_permission_code">buildrun.route.menu.logistics_address_settings</field>
+				<field name="type" unique="true">menu</field>
+				<field name="name" language="zh_CN">地址信息</field>
+				<field name="name" language="en_US">Address</field>
+				<field name="name">地址信息</field>
+				<field name="sort">1</field>
+				<field name="parent_id" ref="base-service.iam_menu_b.buildrun.top.logistics_mgt:id"></field>
+				<field name="parent_code" ref="base-service.iam_menu_b.buildrun.top.logistics_mgt:code"></field>
+				<field name="is_default">1</field>
+				<field name="service_code">macula-samples-logistics-admin</field>
+				<field name="icon">settings</field>
+				<field name="resource_level">site</field>
+			</record>
+			<record externalId="buildrun.menu_item.logistics_address_version">
+				<field name="id" primary="true"></field>
+				<field name="code" unique="true">buildrun.menu_item.logistics_address_version</field>
+				<field name="page_permission_code">buildrun.route.menu_item.logistics_address_version</field>
+				<field name="type" unique="true">menu_item</field>
+				<field name="name" language="zh_CN">菜鸟地址版本</field>
+				<field name="name" language="en_US"> Address Version</field>
+				<field name="name">菜鸟地址版本</field>
+				<field name="sort">1</field>
+				<field name="parent_id" ref="base-service.iam_menu_b.buildrun.menu.logistics_address_settings:id"></field>
+				<field name="parent_code" ref="base-service.iam_menu_b.buildrun.menu.logistics_address_settings:code"></field>
+				<field name="is_default">1</field>
+				<field name="service_code">macula-samples-logistics-admin</field>
+				<field name="icon">local_shipping</field>
+				<field name="resource_level">site</field>
+			</record>
+		</table>
+	</service>
+</seed>

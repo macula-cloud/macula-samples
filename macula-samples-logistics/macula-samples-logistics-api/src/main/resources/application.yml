@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    url: jdbc:mysql://172.20.72.137/logistics?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=CTT
+    username: root
+    password: root
+    druid:
+      initial-size: 0
+      max-active: 8
+      min-idle: 0
+      time-between-eviction-runs-millis: 60000
+      time-between-connect-error-millis: 500
+      min-evictable-idle-time-millis: 1800000
+      max-evictable-idle-time-millis: 25200000
+  jpa:
+    open-in-view: false
+  redis:
+    redisson:
+      config: classpath:redisson.yml
+  cloud:
+    stream:
+      rocketmq:
+        binder:
+          name-server: 10.87.132.63:9876;10.87.132.64:9876;10.87.132.65:9876
+          producer:
+            group: macula-samples-logistics
+      default-binder: rocketmq
+      bindings:
+        output:
+          destination: LOGISTICS-TOPIC-DEV
+          content-type: application/json

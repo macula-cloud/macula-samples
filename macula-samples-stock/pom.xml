@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>macula-cloud</groupId>
+		<artifactId>macula-samples</artifactId>
+		<version>1.0.0</version>
+	</parent>
+
+	<artifactId>macula-samples-stock</artifactId>
+	<packaging>pom</packaging>
+	<description>Macula Samples Stock Applications Projects</description>
+
+	<properties>
+		<stock.version>1.0.0</stock.version>
+		<oracle.version>11.2.0.3.0</oracle.version>
+		<flink.version>1.11.2</flink.version>
+		<hadoop.version>3.3.0</hadoop.version>
+		<aliyun-one.version>1.8.4.Final</aliyun-one.version>
+	</properties>
+
+	<modules>
+		<module>macula-samples-stock-admin</module>
+		<module>macula-samples-stock-api</module>
+		<module>macula-samples-stock-client</module>
+		<module>macula-samples-stock-common</module>
+		<module>macula-samples-stock-exec</module>
+		<module>macula-samples-stock-log</module>
+		<module>macula-samples-stock-schedule</module>
+	</modules>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>macula-cloud</groupId>
+				<artifactId>macula-samples-stock-common</artifactId>
+				<version>${stock.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>org.springframework.boot</groupId>
+						<artifactId>spring-boot-starter-data-jpa</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+			<dependency>
+				<groupId>com.aliyun.openservices</groupId>
+				<artifactId>ons-client</artifactId>
+				<version>${aliyun-one.version}</version>
+			</dependency>
+
+		</dependencies>
+	</dependencyManagement>
+</project>

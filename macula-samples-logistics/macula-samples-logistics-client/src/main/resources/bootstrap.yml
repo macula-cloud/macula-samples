@@ -1,0 +1,55 @@
+server:
+  port: ${SERVER_PORT:7700}
+spring:
+  application:
+    name: ${APPLICATION_NAME:macula-samples-logistics-client}
+  cloud:
+    inetutils:
+      ignored-interfaces: ${IGNORED_INTERFACES:eth0}
+      preferred-networks: ${PREFERRED_NETWORKS:10.0}
+    nacos:
+      discovery:
+        server-addr: ${NACOS_HOST:172.20.72.131}:${NACOS_PORT:8848}
+        group: macula-samples
+    config:
+      discovery:
+        enabled: true
+        service-id: macula-cloud-config
+      label: ${GIT_LABEL:master}
+      profile: ${CONFIG-PROFILE-ACTIVE:wilson}
+    alibaba:
+      seata:
+        tx-service-group: ${spring.application.name}
+seata:
+  enabled: true
+  service:
+    vgroup-mapping: default
+    grouplist: 127.0.0.1:8091
+    disable-global-transaction: false
+eureka:
+  instance:
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 10
+    lease-rxpiration-duration-in-seconds: 30
+  client:
+    fetchRegistry: ${EUREKA_FETCH_REGISTRY:true}
+    serviceUrl:
+      defaultZone: http://${EUREKA_USER:macula}:${EUREKA_PASSWORD:macula2019}@${EUREKA_HOST:registry}:${EUREKA_PORT:8761}/eureka/
+management:
+  endpoint:
+    health:
+      show-details: ALWAYS
+  server:
+    port: 7701
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+logging:
+  pattern:
+    console: '%d{MM-dd HH:mm:ss.SSS} [%thread] %-5p [%C#%M:%L] %m%n'
+    file: '%d{MM-dd HH:mm:ss.SSS} [%thread] %-5p [%C#%M:%L] %m%n'
+  level:
+    org.springframework.cloud.config: error
+    com.alibaba.druid.pool: error
+    com.netflix: false

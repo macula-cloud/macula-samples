@@ -1,0 +1,22 @@
+CREATE TABLE `lc_cn_address_dc_daily` (
+  `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `DAY` varchar(8) NOT NULL,
+  `CODE` varchar(32) NOT NULL COMMENT '地址编码',
+  `NAME` varchar(128) NOT NULL COMMENT '地址名称',
+  `ADDRESS_TYPE` tinyint(3) unsigned NOT NULL COMMENT '地址类型',
+  `PARENT_CODE` varchar(32) DEFAULT NULL COMMENT '父级地址编码',
+  `ADDRESS` varchar(512) DEFAULT NULL COMMENT '地址',
+  `IS_LEAF` tinyint(3) unsigned NOT NULL COMMENT '是否页子节点',
+  `DC1` varchar(4) DEFAULT NULL,
+  `DC2` varchar(4) DEFAULT NULL,
+  `DC3` varchar(4) DEFAULT NULL,
+  `OBJECT_VERSION_NUMBER` bigint(20) unsigned DEFAULT '1',
+  `CREATED_BY` varchar(20) DEFAULT '0',
+  `CREATION_DATE` datetime DEFAULT CURRENT_TIMESTAMP,
+  `LAST_UPDATED_BY` varchar(20) DEFAULT '0',
+  `LAST_UPDATE_DATE` datetime DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`ID`),
+  UNIQUE KEY `LC_CN_ADDRESS_UDX_01` (`CODE`,`DAY`) USING BTREE,
+  KEY `LC_CN_ADDRESS_IDX_01` (`PARENT_CODE`,`DAY`) USING BTREE,
+  KEY `LC_CN_ADDRESS_IDX_02` (`DAY`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='每日地址DC映射表';

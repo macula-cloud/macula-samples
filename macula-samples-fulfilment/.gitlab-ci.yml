@@ -1,0 +1,35 @@
+image: harbor.javalabs.com.cn/javalabs-tools/ci-base:0.0.2
+
+stages:
+   - build
+   - release
+
+build:
+   stage: build
+   script:
+   - mvn clean package deploy -Dmaven.test.skip=true
+   
+release:
+   stage: release
+   script:
+   - mvn clean package -Dmaven.test.skip=true
+   - cd macula-samples-fulfilment-api
+   - mvn dockerfile:build dockerfile:push
+   - cd ../macula-samples-fulfilment-gbss
+   - mvn dockerfile:build dockerfile:push
+   - cd ../macula-samples-fulfilment-log
+   - mvn dockerfile:build dockerfile:push
+   - cd ../macula-samples-fulfilment-sap
+   - mvn dockerfile:build dockerfile:push
+   - cd ../macula-samples-fulfilment-schedule
+   - mvn dockerfile:build dockerfile:push
+   - cd ../macula-samples-fulfilment-web
+   - mvn dockerfile:build dockerfile:push
+   only:
+    - master
+    - /^release-.*$/
+    - /^hotfix-.*$/
+    
+before_script:
+   - mkdir -p /root/.docker
+   - echo "{\"auths\":{\"harbor.javalabs.com.cn\":{\"auth\":\"$(echo -n admin:Harbor12345 | base64)\"}}}" > /root/.docker/config.json

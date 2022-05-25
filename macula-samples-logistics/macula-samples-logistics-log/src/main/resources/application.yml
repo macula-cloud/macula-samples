@@ -1,0 +1,54 @@
+spring:
+  datasource:
+    url: jdbc:mysql://172.20.72.137/inventory?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=CTT
+    username: root
+    password: root
+    druid:
+      initial-size: 0
+      max-active: 8
+      min-idle: 0
+      time-between-eviction-runs-millis: 60000
+      time-between-connect-error-millis: 500
+      min-evictable-idle-time-millis: 1800000
+      max-evictable-idle-time-millis: 25200000
+  jpa:
+    open-in-view: false
+  redis:
+    redisson:
+      config: classpath:redisson.yml
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${NACOS_HOST:172.20.72.131}:${NACOS_PORT:8848}
+        group: macula-samples
+    stream:
+      rocketmq:
+        binder:
+          name-server: 10.87.132.63:9876;10.87.132.64:9876;10.87.132.65:9876
+        bindings:
+          stock-reserve-event-input:
+            consumer:
+              tags: org.macula.cloud.stock.event.InventoryReserveEvent
+              orderly: false
+          stock-commit-event-input:
+            consumer:
+              tags: org.macula.cloud.stock.event.InventoryCommitEvent
+              orderly: false
+          stock-release-event-input:
+            consumer:
+              tags: org.macula.cloud.stock.event.InventoryReleaseEvent
+              orderly: false
+      default-binder: rocketmq
+      bindings:
+        stock-reserve-event-input:
+          destination: STOCK-TOPIC-DEV
+          content-type: application/json
+          group: macula-samples-stock-reserve
+        stock-commit-event-input:
+          destination: STOCK-TOPIC-DEV
+          content-type: application/json
+          group: macula-samples-stock-commit
+        stock-release-event-input:
+          destination: STOCK-TOPIC-DEV
+          content-type: application/json
+          group: macula-samples-stock-release

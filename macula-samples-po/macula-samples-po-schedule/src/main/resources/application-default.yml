@@ -1,0 +1,71 @@
+macula:
+  cloud:
+    security:
+      public-urls: /**
+      open-api:
+        openapi_oms: openapi_oms_secret
+    sap:
+      props:
+        jco.client.client: 600
+        jco.client.user: JCOTECDEC
+        jco.client.passwd: ENC(Fr2AHhTB7is/ADU9ubdRAM6bbxztV9rRc4prWdGkK30=)
+        jco.client.lang: ZH
+        jco.client.ashost: ecc-test.javalabs.top
+        jco.client.sysnr: 0
+        jco.destination.pool_capacity: 5
+        max_connect_time_out: 360000
+        max_socket_time_out: 360000
+    alimq:
+      props:
+        ONSAddr: http://mq.server-test.javalabs.top/rocketmq/nsaddr4broker-internal
+        AccessKey: e554eba80d2746508c26647b978a79fc
+        SecretKey: Kt6eVfz3tJX0LFez3XoDEGHS9PQ=
+        ConsumerId: CID_SCMP_PO_CENTER
+        ProducerId: PID_SCMP_PO_CENTER
+    oms:
+      max-retry-times: 3
+      order-topic: GBSS_PO_API_ORDER_PAID_DEV
+      callback-topic: PDSD_OMS_API
+      status-topic: GBSS_PO_ADMIN_ORDER_OPER_DEV
+      refund-topic: GBSS_PO_API_ORDER_REFUND_DEV
+      po-check-range: 600
+      po-validate-range: 180
+      min-upload-id: 18857428
+      min-upload2-id: 18857428
+      sap-mock: 'false'
+    sms:
+      url: http://newsms.javalabs.top/Message3WebService/SendMessage2Service
+      username: ceshi1024
+      password: newsms
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://macula:macula2019@10.87.132.22:31678/eureka
+spring:
+  datasource:
+    url: jdbc:mysql://10.87.140.74/db_oms_dev?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=CTT
+    username: dbu_oms_dev
+    password: abc_123
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  redis:
+    host: 10.87.140.81
+    port: 6381
+    password: redis%%sccdev321
+    database: 3
+security:
+  oauth2:
+    client:
+      client-id: client
+      client-secret: secret
+      access-token-uri: ${OAUTH_SERVER:https://api.javalabs.top/oauth}/oauth/token
+      user-authorization-uri: ${OAUTH_SERVER:https://api.javalabs.top/oauth}/oauth/authorize
+    resource:
+      token-info-uri: ${OAUTH_SERVER:https://api.javalabs.top/oauth}/oauth/check_token
+      user-info-uri: ${OAUTH_SERVER:https://api.javalabs.top/oauth}/api/user
+gbss:
+  esb:
+    url: http://172.20.72.25:6089

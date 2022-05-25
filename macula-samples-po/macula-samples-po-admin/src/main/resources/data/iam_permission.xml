@@ -1,0 +1,116 @@
+<seed>
+    <service name="base-service">
+        <table name="iam_permission">
+
+            <record externalId="buildrun.route.top.oms_admin_mgt">
+                <field name="id" primary="true"></field>
+                <field name="code" unique="true">buildrun.route.top.oms_admin_mgt</field>
+                <field name="path">/oms_admin_mgt</field>
+                <field name="service_code">macula-samples-po-admin</field>
+                <field name="resource_level">site</field>
+                <field name="description">订单中心路由</field>
+                <field name="permission_type">page</field>
+                <field name="is_public_access">0</field>
+                <field name="is_login_access">0</field>
+                <field name="is_within">0</field>
+            </record>
+            <record externalId="buildrun.route.menu.oms_admin_order_mgt">
+                <field name="id" primary="true"></field>
+                <field name="code" unique="true">buildrun.route.menu.oms_admin_order_mgt</field>
+                <field name="path">/oms_order_mgt</field>
+                <field name="service_code">macula-samples-po-admin</field>
+                <field name="resource_level">site</field>
+                <field name="description">订单管理路由</field>
+                <field name="permission_type">page</field>
+                <field name="is_public_access">0</field>
+                <field name="is_login_access">0</field>
+                <field name="is_within">0</field>
+            </record>
+            <record externalId="buildrun.route.menu_item.oms_admin_order_list">
+                <field name="id" primary="true"></field>
+                <field name="code" unique="true">buildrun.route.menu_item.oms_admin_order_list</field>
+                <field name="path">/order/order-list</field>
+                <field name="service_code">macula-samples-po-admin</field>
+                <field name="resource_level">site</field>
+                <field name="description">订单查询</field>
+                <field name="permission_type">page</field>
+                <field name="is_public_access">0</field>
+                <field name="is_login_access">0</field>
+                <field name="is_within">0</field>
+            </record>
+            <record externalId="buildrun.route.menu_item.oms_admin_message_list">
+                <field name="id" primary="true"></field>
+                <field name="code" unique="true">buildrun.route.menu_item.oms_admin_message_list</field>
+                <field name="path">/order/message-list</field>
+                <field name="service_code">macula-samples-po-admin</field>
+                <field name="resource_level">site</field>
+                <field name="description">短信级别查询</field>
+                <field name="permission_type">page</field>
+                <field name="is_public_access">0</field>
+                <field name="is_login_access">0</field>
+                <field name="is_within">0</field>
+            </record>
+            <record externalId="buildrun.route.menu_item.oms_admin_check_list">
+                <field name="id" primary="true"></field>
+                <field name="code" unique="true">buildrun.route.menu_item.oms_admin_check_list</field>
+                <field name="path">/order/check-list</field>
+                <field name="service_code">macula-samples-po-admin</field>
+                <field name="resource_level">site</field>
+                <field name="description">自动对账查询</field>
+                <field name="permission_type">page</field>
+                <field name="is_public_access">0</field>
+                <field name="is_login_access">0</field>
+                <field name="is_within">0</field>
+            </record>
+            <record externalId="buildrun.route.menu_item.oms_admin_handle_check_list">
+                <field name="id" primary="true"></field>
+                <field name="code" unique="true">buildrun.route.menu_item.oms_admin_handle_check_list</field>
+                <field name="path">/order/handle-check-list</field>
+                <field name="service_code">macula-samples-po-admin</field>
+                <field name="resource_level">site</field>
+                <field name="description">手动对账查询</field>
+                <field name="permission_type">page</field>
+                <field name="is_public_access">0</field>
+                <field name="is_login_access">0</field>
+                <field name="is_within">0</field>
+            </record>
+            <record externalId="buildrun.menu_item.oms_admin_order_process_list">
+                <field name="id" primary="true"></field>
+                <field name="code" unique="true">buildrun.route.menu_item.oms_admin_order_process_list</field>
+                <field name="path">/order/process-list</field>
+                <field name="service_code">macula-samples-po-admin</field>
+                <field name="resource_level">site</field>
+                <field name="description">订单处理流程</field>
+                <field name="permission_type">page</field>
+                <field name="is_public_access">0</field>
+                <field name="is_login_access">0</field>
+                <field name="is_within">0</field>
+            </record>
+            <!--系统设置路由-->
+            <record externalId="buildrun.route.menu.oms_admin_settings_mgt">
+                <field name="id" primary="true"></field>
+                <field name="code" unique="true">buildrun.route.menu.oms_admin_settings_mgt</field>
+                <field name="path">/settings-mgt</field>
+                <field name="service_code">macula-samples-po-admin</field>
+                <field name="resource_level">site</field>
+                <field name="description">系统设置路由</field>
+                <field name="permission_type">page</field>
+                <field name="is_public_access">0</field>
+                <field name="is_login_access">0</field>
+                <field name="is_within">0</field>
+            </record>
+            <record externalId="buildrun.route.menu_item.oms_admin_process_control_list">
+                <field name="id" primary="true"></field>
+                <field name="code" unique="true">buildrun.route.menu_item.oms_admin_process_control_list</field>
+                <field name="path">/order/order-control</field>
+                <field name="service_code">macula-samples-po-admin</field>
+                <field name="resource_level">site</field>
+                <field name="description">订单中心控制</field>
+                <field name="permission_type">page</field>
+                <field name="is_public_access">0</field>
+                <field name="is_login_access">0</field>
+                <field name="is_within">0</field>
+            </record>
+        </table>
+    </service>
+</seed>

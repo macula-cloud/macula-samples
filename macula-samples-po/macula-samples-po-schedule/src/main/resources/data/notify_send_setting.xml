@@ -1,0 +1,25 @@
+<seed>
+    <service name="notify-service">
+        <table name="notify_send_setting">
+            <record externalId="oms-notice-upload-error">
+                <field name="id" primary="true"></field>
+                <field name="code" unique="true">oms-notice-upload-error</field>
+                <field name="name">订单上传失败告警</field>
+                <field name="description">订单上传失败告警</field>
+                <field name="fd_level">site</field>
+                <field name="retry_count">0</field>
+                <field name="is_send_instantly">1</field>
+                <field name="is_manual_retry">1</field>
+                <field name="is_allow_config">1</field>
+                <field name="category_code">oms-notice</field>
+                <field name="email_enabled_flag">1</field>
+                <field name="pm_enabled_flag">0</field>
+                <field name="sms_enabled_flag">0</field>
+                <field name="we_chat_enabled_flag">0</field>
+                <field name="is_edit">1</field>
+                <field name="we_chat_template_id"></field>
+                <field name="we_chat_page"></field>
+            </record>
+        </table>
+    </service>
+</seed>

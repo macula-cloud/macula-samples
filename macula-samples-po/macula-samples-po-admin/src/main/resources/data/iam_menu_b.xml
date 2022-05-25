@@ -1,0 +1,166 @@
+<seed>
+    <service name="base-service">
+        <table name="iam_menu_b">
+            <record externalId="buildrun.top.oms_admin_mgt">
+                <field name="id" primary="true"></field>
+                <field name="code" unique="true">buildrun.top.oms_admin_mgt</field>
+                <field name="page_permission_code">buildrun.route.top.oms_admin_mgt</field>
+                <field name="type" unique="true">top</field>
+                <field name="name" language="zh_CN">订单中心</field>
+                <field name="name" language="en_US">Order Center</field>
+                <field name="name">订单中心</field>
+                <field name="sort">110</field>
+                <field name="parent_id">0</field>
+                <field name="parent_code"></field>
+                <field name="is_default">1</field>
+                <field name="service_code">macula-samples-po-admin</field>
+                <field name="icon">application_market</field>
+                <field name="resource_level">site</field>
+            </record>
+            <record externalId="buildrun.menu.oms_admin_order_mgt">
+                <field name="id" primary="true"></field>
+                <field name="code" unique="true">buildrun.menu.oms_admin_order_mgt</field>
+                <field name="page_permission_code">buildrun.route.menu.oms_admin_order_mgt</field>
+                <field name="type" unique="true">menu</field>
+                <field name="name" language="zh_CN">订单管理</field>
+                <field name="name" language="en_US">Order Manager</field>
+                <field name="name">订单管理</field>
+                <field name="sort">1</field>
+                <field name="parent_id" ref="base-service.iam_menu_b.buildrun.top.oms_admin_mgt:id"></field>
+                <field name="parent_code" ref="base-service.iam_menu_b.buildrun.top.oms_admin_mgt:code"></field>
+                <field name="is_default">1</field>
+                <field name="service_code">macula-samples-po-admin</field>
+                <field name="icon">settings</field>
+                <field name="resource_level">site</field>
+            </record>
+            <record externalId="buildrun.menu_item.oms_admin_order_list">
+                <field name="id" primary="true"></field>
+                <field name="code" unique="true">buildrun.menu_item.oms_admin_order_list</field>
+                <field name="page_permission_code">buildrun.route.menu_item.oms_admin_order_list</field>
+                <field name="type" unique="true">menu_item</field>
+                <field name="name" language="zh_CN">订单查询</field>
+                <field name="name" language="en_US">Order Query</field>
+                <field name="name">订单查询</field>
+                <field name="sort">1</field>
+                <field name="parent_id" ref="base-service.iam_menu_b.buildrun.menu.oms_admin_order_mgt:id"></field>
+                <field name="parent_code" ref="base-service.iam_menu_b.buildrun.menu.oms_admin_order_mgt:code"></field>
+                <field name="is_default">1</field>
+                <field name="service_code">macula-samples-po-admin</field>
+                <field name="icon">view_list</field>
+                <field name="resource_level">site</field>
+            </record>
+            <record externalId="buildrun.menu_item.oms_admin_check_list">
+                <field name="id" primary="true"></field>
+                <field name="code" unique="true">buildrun.menu_item.oms_admin_check_list</field>
+                <field name="page_permission_code">buildrun.route.menu_item.oms_admin_check_list</field>
+                <field name="type" unique="true">menu_item</field>
+                <field name="name" language="zh_CN">自动对账查询</field>
+                <field name="name" language="en_US">Bill Query</field>
+                <field name="name">自动对账查询</field>
+                <field name="sort">3</field>
+                <field name="parent_id" ref="base-service.iam_menu_b.buildrun.menu.oms_admin_order_mgt:id"></field>
+                <field name="parent_code" ref="base-service.iam_menu_b.buildrun.menu.oms_admin_order_mgt:code"></field>
+                <field name="is_default">1</field>
+                <field name="service_code">macula-samples-po-admin</field>
+                <field name="icon">playlist_add_check</field>
+                <field name="resource_level">site</field>
+            </record>
+            <record externalId="buildrun.menu_item.oms_admin_handle_check_list">
+                <field name="id" primary="true"></field>
+                <field name="code" unique="true">buildrun.menu_item.oms_admin_handle_check_list</field>
+                <field name="page_permission_code">buildrun.route.menu_item.oms_admin_handle_check_list</field>
+                <field name="type" unique="true">menu_item</field>
+                <field name="name" language="zh_CN">手动对账查询</field>
+                <field name="name" language="en_US">Bill handle</field>
+                <field name="name">手动对账查询</field>
+                <field name="sort">4</field>
+                <field name="parent_id" ref="base-service.iam_menu_b.buildrun.menu.oms_admin_order_mgt:id"></field>
+                <field name="parent_code" ref="base-service.iam_menu_b.buildrun.menu.oms_admin_order_mgt:code"></field>
+                <field name="is_default">1</field>
+                <field name="service_code">macula-samples-po-admin</field>
+                <field name="icon">playlist_add_check</field>
+                <field name="resource_level">site</field>
+            </record>
+            <record externalId="buildrun.menu_item.oms_admin_order_process_list">
+                <field name="id" primary="true"></field>
+                <field name="code" unique="true">buildrun.menu_item.oms_admin_order_process_list</field>
+                <field name="page_permission_code">buildrun.route.menu_item.oms_admin_order_process_list</field>
+                <field name="type" unique="true">menu_item</field>
+                <field name="name" language="zh_CN">订单处理总览</field>
+                <field name="name" language="en_US">Order Process View</field>
+                <field name="name">订单处理总览</field>
+                <field name="sort">2</field>
+                <field name="parent_id" ref="base-service.iam_menu_b.buildrun.menu.oms_admin_order_mgt:id"></field>
+                <field name="parent_code" ref="base-service.iam_menu_b.buildrun.menu.oms_admin_order_mgt:code"></field>
+                <field name="is_default">1</field>
+                <field name="service_code">macula-samples-po-admin</field>
+                <field name="icon">sync_records</field>
+                <field name="resource_level">site</field>
+            </record>
+            <record externalId="buildrun.menu.oms_admin_alarm_mgt">
+                <field name="id" primary="true"></field>
+                <field name="code" unique="true">buildrun.menu.buildrun.menu.oms_admin_alarm_mgt</field>
+                <field name="page_permission_code">buildrun.route.menu.oms_admin_alarm_mgt</field>
+                <field name="type" unique="true">menu</field>
+                <field name="name" language="zh_CN">消息管理</field>
+                <field name="name" language="en_US">Message Manager</field>
+                <field name="name">消息管理</field>
+                <field name="sort">10</field>
+                <field name="parent_id" ref="base-service.iam_menu_b.buildrun.top.oms_admin_mgt:id"></field>
+                <field name="parent_code" ref="base-service.iam_menu_b.buildrun.top.oms_admin_mgt:code"></field>
+                <field name="is_default">1</field>
+                <field name="service_code">macula-samples-po-admin</field>
+                <field name="icon">settings</field>
+                <field name="resource_level">site</field>
+            </record>
+            <record externalId="buildrun.menu_item.oms_admin_message_list">
+                <field name="id" primary="true"></field>
+                <field name="code" unique="true">buildrun.menu_item.oms_admin_message_list</field>
+                <field name="page_permission_code">buildrun.route.menu_item.oms_admin_message_list</field>
+                <field name="type" unique="true">menu_item</field>
+                <field name="name" language="zh_CN">告警设置</field>
+                <field name="name" language="en_US">Alarm Settings</field>
+                <field name="name">告警设置</field>
+                <field name="sort">1</field>
+                <field name="parent_id" ref="base-service.iam_menu_b.buildrun.menu.oms_admin_alarm_mgt:id"></field>
+                <field name="parent_code" ref="base-service.iam_menu_b.buildrun.menu.oms_admin_alarm_mgt:code"></field>
+                <field name="is_default">1</field>
+                <field name="service_code">macula-samples-po-admin</field>
+                <field name="icon">message_notification</field>
+                <field name="resource_level">site</field>
+            </record>
+            <!--系统设置-->
+            <record externalId="buildrun.menu.oms_admin_settings_mgt">
+                <field name="id" primary="true"></field>
+                <field name="code" unique="true">buildrun.menu.oms_admin_settings_mgt</field>
+                <field name="page_permission_code">buildrun.route.menu.oms_admin_settings_mgt</field>
+                <field name="type" unique="true">menu</field>
+                <field name="name" language="zh_CN">系统设置</field>
+                <field name="name" language="en_US">Settings Manager</field>
+                <field name="name">系统设置</field>
+                <field name="sort">20</field>
+                <field name="parent_id" ref="base-service.iam_menu_b.buildrun.top.oms_admin_mgt:id"></field>
+                <field name="parent_code" ref="base-service.iam_menu_b.buildrun.top.oms_admin_mgt:code"></field>
+                <field name="icon">settings</field>
+                <field name="resource_level">site</field>
+            </record>
+            <record externalId="buildrun.menu_item.oms_admin_process_control_list">
+                <field name="id" primary="true"></field>
+                <field name="code" unique="true">buildrun.menu_item.oms_admin_process_control_list</field>
+                <field name="page_permission_code">buildrun.route.menu_item.oms_admin_process_control_list</field>
+                <field name="type" unique="true">menu_item</field>
+                <field name="name" language="zh_CN">订单中心控制</field>
+                <field name="name" language="en_US">Control Settings</field>
+                <field name="name">订单中心控制</field>
+                <field name="sort">1</field>
+                <field name="parent_id" ref="base-service.iam_menu_b.buildrun.menu.oms_admin_settings_mgt:id"></field>
+                <field name="parent_code"
+                       ref="base-service.iam_menu_b.buildrun.menu.oms_admin_settings_mgt:code"></field>
+                <field name="is_default">0</field>
+                <field name="service_code">macula-samples-po-admin</field>
+                <field name="icon">settings</field>
+                <field name="resource_level">site</field>
+            </record>
+        </table>
+    </service>
+</seed>

@@ -1,0 +1,117 @@
+<seed>
+	<service name="base-service">
+		<table name="iam_menu_permission">
+			<record externalId="buildrun.top.logistics_mgt_buildrun.route.top.logistics_mgt">
+				<field name="id" primary="true"></field>
+				<field name="menu_code" unique="true">buildrun.top.logistics_mgt</field>
+				<field name="permission_code" unique="true">buildrun.route.top.logistics_mgt</field>
+			</record>
+			<record externalId="buildrun.menu.supplier_buildrun.route.menu.supplier">
+				<field name="id" primary="true"></field>
+				<field name="menu_code" unique="true">buildrun.menu.logistics_settings</field>
+				<field name="permission_code" unique="true">buildrun.route.menu.logistics_settings</field>
+			</record>
+			<record externalId="buildrun.menu_item.logistics_address_buildrun.route.menu_item.logistics_address">
+				<field name="id" primary="true"></field>
+				<field name="menu_code" unique="true">buildrun.menu_item.logistics_address</field>
+				<field name="permission_code" unique="true">buildrun.route.menu_item.logistics_address</field>
+			</record>
+
+			<record externalId="buildrun.menu_item.logistics_address_logistics-service.address.importAddress">
+				<field name="id" primary="true"></field>
+				<field name="menu_code" unique="true">buildrun.menu_item.logistics_address</field>
+				<field name="permission_code" unique="true">logistics-service.address.importAddress</field>
+			</record>
+			<record externalId="buildrun.menu_item.logistics_address_logistics-service.address.exportAddress">
+				<field name="id" primary="true"></field>
+				<field name="menu_code" unique="true">buildrun.menu_item.logistics_address</field>
+				<field name="permission_code" unique="true">logistics-service.address.exportAddress</field>
+			</record>
+			<record externalId="buildrun.menu_item.logistics_address_logistics-service.address.list">
+				<field name="id" primary="true"></field>
+				<field name="menu_code" unique="true">buildrun.menu_item.logistics_address</field>
+				<field name="permission_code" unique="true">logistics-service.address.list</field>
+			</record>
+			<record externalId="buildrun.menu_item.logistics_address_logistics-service.address.update">
+				<field name="id" primary="true"></field>
+				<field name="menu_code" unique="true">buildrun.menu_item.logistics_address</field>
+				<field name="permission_code" unique="true">logistics-service.address.update</field>
+			</record>
+			<record externalId="buildrun.menu_item.logistics_address_logistics-service.address.getLatestUrl">
+				<field name="id" primary="true"></field>
+				<field name="menu_code" unique="true">buildrun.menu_item.logistics_address</field>
+				<field name="permission_code" unique="true">logistics-service.address.getLatestUrl</field>
+			</record>
+			<record externalId="buildrun.menu_item.logistics_address_logistics-service.address.query">
+				<field name="id" primary="true"></field>
+				<field name="menu_code" unique="true">buildrun.menu_item.logistics_address</field>
+				<field name="permission_code" unique="true">logistics-service.address.query</field>
+			</record>
+			<record externalId="buildrun.menu_item.logistics_address_logistics-service.dc-setting.queryStoreDcSettings">
+				<field name="id" primary="true"></field>
+				<field name="menu_code" unique="true">buildrun.menu_item.logistics_address</field>
+				<field name="permission_code" unique="true">logistics-service.dc-setting.queryStoreDcSettings</field>
+			</record>
+			<record externalId="buildrun.menu_item.logistics_address_logistics-service.dc-setting.insertOrHomeDcSettings">
+				<field name="id" primary="true"></field>
+				<field name="menu_code" unique="true">buildrun.menu_item.logistics_address</field>
+				<field name="permission_code" unique="true">logistics-service.dc-setting.insertOrHomeDcSettings</field>
+			</record>
+			<record externalId="buildrun.menu_item.logistics_address_logistics-service.dc-setting.queryHomeDcSettings">
+				<field name="id" primary="true"></field>
+				<field name="menu_code" unique="true">buildrun.menu_item.logistics_address</field>
+				<field name="permission_code" unique="true">logistics-service.dc-setting.queryHomeDcSettings</field>
+			</record>
+			<record
+				externalId="buildrun.menu_item.logistics_address_logistics-service.dc-setting.insertOrUpdateHomeDcSettings">
+				<field name="id" primary="true"></field>
+				<field name="menu_code" unique="true">buildrun.menu_item.logistics_address</field>
+				<field name="permission_code" unique="true">logistics-service.dc-setting.insertOrUpdateHomeDcSettings</field>
+			</record>
+			<record
+				externalId="buildrun.menu_item.logistics_address_logistics-service.dc-setting.insertOrUpdateStoreDcSettings">
+				<field name="id" primary="true"></field>
+				<field name="menu_code" unique="true">buildrun.menu_item.logistics_address</field>
+				<field name="permission_code" unique="true">logistics-service.dc-setting.insertOrUpdateStoreDcSettings</field>
+			</record>
+
+			<record
+				externalId="buildrun.menu_item.logistics_address_logistics-service.template.downloadAddressesTemplates">
+				<field name="id" primary="true"></field>
+				<field name="menu_code" unique="true">buildrun.menu_item.logistics_address</field>
+				<field name="permission_code" unique="true">logistics-service.template.downloadAddressesTemplates</field>
+			</record>
+			<record
+				externalId="buildrun.menu_item.logistics_address_logistics-service.template.downloadDcSettingsTemplates">
+				<field name="id" primary="true"></field>
+				<field name="menu_code" unique="true">buildrun.menu_item.logistics_address</field>
+				<field name="permission_code" unique="true">logistics-service.template.downloadDcSettingsTemplates</field>
+			</record>
+			<record externalId="buildrun.menu_item.logistics_address_logistics-service.dc-setting.import">
+				<field name="id" primary="true"></field>
+				<field name="menu_code" unique="true">buildrun.menu_item.logistics_address</field>
+				<field name="permission_code" unique="true">logistics-service.dc-setting.importDCSetting</field>
+			</record>
+			<record externalId="buildrun.menu_item.logistics_address_logistics-service.dc-setting.exportDCSetting">
+				<field name="id" primary="true"></field>
+				<field name="menu_code" unique="true">buildrun.menu_item.logistics_address</field>
+				<field name="permission_code" unique="true">logistics-service.dc-setting.exportDCSetting</field>
+			</record>
+			<record externalId="buildrun.menu_item.logistics_address_logistics-service.dc-setting.getLatestUrl">
+				<field name="id" primary="true"></field>
+				<field name="menu_code" unique="true">buildrun.menu_item.logistics_address</field>
+				<field name="permission_code" unique="true">logistics-service.dc-setting.getLatestUrl</field>
+			</record>
+			<record externalId="buildrun.menu.logistics_buildrun.route.menu.logistics_address_settings">
+				<field name="id" primary="true"></field>
+				<field name="menu_code" unique="true">buildrun.menu.logistics_address_settings</field>
+				<field name="permission_code" unique="true">buildrun.route.menu.logistics_address_settings</field>
+			</record>
+			<record externalId="buildrun.menu_item.logistics_address_buildrun.route.menu_item.logistics_address_version">
+				<field name="id" primary="true"></field>
+				<field name="menu_code" unique="true">buildrun.menu_item.logistics_address_version</field>
+				<field name="permission_code" unique="true">buildrun.route.menu_item.logistics_address_version</field>
+			</record>
+		</table>
+	</service>
+</seed>

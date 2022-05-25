@@ -1,0 +1,36 @@
+server:
+   port: 7081
+eureka:
+   instance:
+      preferIpAddress: true
+      leaseRenewalIntervalInSeconds: 10
+      leaseExpirationDurationInSeconds: 30
+      metadata-map:
+         VERSION: v1
+   client:
+      serviceUrl:
+         defaultZone: http://macula:macula2019@10.87.132.22:31678/eureka
+      registryFetchIntervalSeconds: 10
+spring:
+   application:
+      name: macula-samples-stock-api
+   cloud:
+      config:
+         enabled: false
+management:
+   endpoint:
+      health:
+         show-details: ALWAYS
+   server:
+      port: 9081
+   endpoints:
+      web:
+         exposure:
+            include: '*'
+logging:
+   pattern:
+      file: '%d %file:%line %p - %m%n'
+      console: '%d %file:%line %p - %m%n'
+buildrun:
+   data:
+      path: /data

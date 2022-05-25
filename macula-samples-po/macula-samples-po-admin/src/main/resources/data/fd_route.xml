@@ -1,0 +1,17 @@
+<seed>
+	<service name="base-service">
+		<table name="fd_route">
+
+			<record externalId="macula-samples-po-admin">
+				<field name="id" primary="true"></field>
+				<field name="service_code" unique="true">macula-samples-po-admin</field>
+				<field name="backend_path">/order/**</field>
+				<field name="frontend_path"></field>
+				<field name="strip_prefix">1</field>
+				<field name="sensitive_headers"></field>
+				<field name="route_id">macula-samples-po-admin</field>
+
+			</record>
+		</table>
+	</service>
+</seed>

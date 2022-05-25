@@ -1,0 +1,189 @@
+<seed>
+    <service name="base-service">
+        <table name="iam_menu_permission">
+            <!--订单中心top菜单-->
+            <record externalId="buildrun.top.oms_admin_mgt_buildrun.route.top.oms_admin_mgt">
+                <field name="id" primary="true"></field>
+                <field name="menu_code" unique="true">buildrun.top.oms_admin_mgt</field>
+                <field name="permission_code" unique="true">buildrun.route.top.oms_admin_mgt</field>
+            </record>
+            <!--订单管理子菜单-->
+            <record externalId="buildrun.menu.oms_admin_order_mgt_buildrun.route.menu.oms_admin_order_mgt">
+                <field name="id" primary="true"></field>
+                <field name="menu_code" unique="true">buildrun.menu.oms_admin_order_mgt</field>
+                <field name="permission_code" unique="true">buildrun.route.menu.oms_admin_order_mgt</field>
+            </record>
+            <!--订单列表项-->
+            <record externalId="buildrun.menu_item.oms_admin_order_list_buildrun.route.menu_item.oms_admin_order_list">
+                <field name="id" primary="true"></field>
+                <field name="menu_code" unique="true">buildrun.menu_item.oms_admin_order_list</field>
+                <field name="permission_code" unique="true">buildrun.route.menu_item.oms_admin_order_list</field>
+            </record>
+            <!--订单查询功能-->
+            <record externalId="buildrun.menu_item.oms_admin_message_list_buildrun.route.menu_item.oms_admin_message_list">
+                <field name="id" primary="true"></field>
+                <field name="menu_code" unique="true">buildrun.menu_item.oms_admin_message_list</field>
+                <field name="permission_code" unique="true">buildrun.route.menu_item.oms_admin_message_list</field>
+            </record>
+            <!--订单处理流程项-->
+            <record externalId="buildrun.menu_item.oms_admin_check_list_buildrun.route.menu_item.oms_admin_check_list">
+                <field name="id" primary="true"></field>
+                <field name="menu_code" unique="true">buildrun.menu_item.oms_admin_check_list</field>
+                <field name="permission_code" unique="true">buildrun.route.menu_item.oms_admin_check_list</field>
+            </record>
+
+
+            <record externalId="buildrun.menu_item.oms_admin_order_list_macula-samples-po-admin.hello.hello">
+                <field name="id" primary="true"></field>
+                <field name="menu_code" unique="true">buildrun.menu_item.oms_admin_order_list</field>
+                <field name="permission_code" unique="true">macula-samples-po-admin.hello.hello</field>
+            </record>
+            <!--订单相关明细查询-->
+            <record externalId="buildrun.menu_item.oms_admin_order_list_macula-samples-po-admin.query_order.order_info">
+                <field name="id" primary="true"></field>
+                <field name="menu_code" unique="true">buildrun.menu_item.oms_admin_order_list</field>
+                <field name="permission_code" unique="true">macula-samples-po-admin.query_order.orderInfo</field>
+            </record>
+
+            <record externalId="buildrun.menu_item.oms_admin_order_list_macula-samples-po-admin.query_order.find_one">
+                <field name="id" primary="true"></field>
+                <field name="menu_code" unique="true">buildrun.menu_item.oms_admin_order_list</field>
+                <field name="permission_code" unique="true">macula-samples-po-admin.query_order.findOne</field>
+            </record>
+            <record externalId="buildrun.menu_item.oms_admin_order_list_macula-samples-po-admin.query_order.find_one">
+                <field name="id" primary="true"></field>
+                <field name="menu_code" unique="true">buildrun.menu_item.oms_admin_order_list</field>
+                <field name="permission_code" unique="true">macula-samples-po-admin.query_order.findOneProsMaster</field>
+            </record>
+            <record externalId="buildrun.menu_item.oms_admin_order_list_macula-samples-po-admin.query_order.order_page">
+                <field name="id" primary="true"></field>
+                <field name="menu_code" unique="true">buildrun.menu_item.oms_admin_order_list</field>
+                <field name="permission_code" unique="true">macula-samples-po-admin.query_order.orderPage</field>
+            </record>
+
+            <!--订单详情-->
+            <record externalId="buildrun.menu_item.oms_admin_order_list_macula-samples-po-admin.query_order.orderPush">
+                <field name="id" primary="true"></field>
+                <field name="menu_code" unique="true">buildrun.menu_item.oms_admin_order_list</field>
+                <field name="permission_code" unique="true">macula-samples-po-admin.query_order.orderPush</field>
+            </record>
+
+            <record externalId="buildrun.menu_item.oms_admin_order_list_macula-samples-po-admin.query_order.findPoDiscountDetail">
+                <field name="id" primary="true"></field>
+                <field name="menu_code" unique="true">buildrun.menu_item.oms_admin_order_list</field>
+                <field name="permission_code" unique="true">macula-samples-po-admin.query_order.findPoDiscountDetail</field>
+            </record>
+            <record externalId="buildrun.menu_item.oms_admin_order_list_macula-samples-po-admin.query_order.findPoAccTranDetail">
+                <field name="id" primary="true"></field>
+                <field name="menu_code" unique="true">buildrun.menu_item.oms_admin_order_list</field>
+                <field name="permission_code" unique="true">macula-samples-po-admin.query_order.findPoAccTranDetail</field>
+            </record>
+            <record externalId="buildrun.menu_item.oms_admin_order_list_macula-samples-po-admin.query_order.findPoPaymentDetail">
+                <field name="id" primary="true"></field>
+                <field name="menu_code" unique="true">buildrun.menu_item.oms_admin_order_list</field>
+                <field name="permission_code" unique="true">macula-samples-po-admin.query_order.findPoPaymentDetail</field>
+            </record>
+            <record externalId="buildrun.menu_item.oms_admin_order_list_macula-samples-po-admin.query_order.findMkpDlpPoRelateDetail">
+                <field name="id" primary="true"></field>
+                <field name="menu_code" unique="true">buildrun.menu_item.oms_admin_order_list</field>
+                <field name="permission_code" unique="true">macula-samples-po-admin.query_order.findMkpDlpPoRelateDetail
+                </field>
+            </record>
+            <record externalId="buildrun.menu_item.oms_admin_order_list_macula-samples-po-admin.query_order.findPoInvoiceInfoDetail">
+                <field name="id" primary="true"></field>
+                <field name="menu_code" unique="true">buildrun.menu_item.oms_admin_order_list</field>
+                <field name="permission_code" unique="true">macula-samples-po-admin.query_order.findPoInvoiceInfoDetail
+                </field>
+            </record>
+
+            <!--短信级别查询-->
+            <record externalId="buildrun.menu_item.oms_admin_message_list_macula-samples-po-admin.query_message.messagePage">
+                <field name="id" primary="true"></field>
+                <field name="menu_code" unique="true">buildrun.menu_item.oms_admin_message_list</field>
+                <field name="permission_code" unique="true">macula-samples-po-admin.message.messagePage</field>
+            </record>
+            <record externalId="buildrun.menu_item.oms_admin_message_list_macula-samples-po-admin.query_message.messageSave">
+                <field name="id" primary="true"></field>
+                <field name="menu_code" unique="true">buildrun.menu_item.oms_admin_message_list</field>
+                <field name="permission_code" unique="true">macula-samples-po-admin.message.messageSave</field>
+            </record>
+            <record externalId="buildrun.menu_item.oms_admin_message_list_macula-samples-po-admin.query_message.messageDelete">
+                <field name="id" primary="true"></field>
+                <field name="menu_code" unique="true">buildrun.menu_item.oms_admin_message_list</field>
+                <field name="permission_code" unique="true">macula-samples-po-admin.message.messageDelete</field>
+            </record>
+            <record externalId="buildrun.menu_item.oms_admin_message_list_macula-samples-po-admin.query_message.messageUpdate">
+                <field name="id" primary="true"></field>
+                <field name="menu_code" unique="true">buildrun.menu_item.oms_admin_message_list</field>
+                <field name="permission_code" unique="true">macula-samples-po-admin.message.messageUpdate</field>
+            </record>
+
+            <!--对账单查询-->
+            <record externalId="buildrun.menu_item.oms_admin_check_list_macula-samples-po-admin.check.checkMasterPage">
+                <field name="id" primary="true"></field>
+                <field name="menu_code" unique="true">buildrun.menu_item.oms_admin_check_list</field>
+                <field name="permission_code" unique="true">macula-samples-po-admin.check.checkMasterPage</field>
+            </record>
+            <record externalId="buildrun.menu_item.oms_admin_check_list_macula-samples-po-admin.check.checkDetailInfo">
+                <field name="id" primary="true"></field>
+                <field name="menu_code" unique="true">buildrun.menu_item.oms_admin_check_list</field>
+                <field name="permission_code" unique="true">macula-samples-po-admin.check.checkDetailInfo</field>
+            </record>
+            <record externalId="buildrun.menu_item.oms_admin_check_list_macula-samples-po-admin.check.findOne">
+                <field name="id" primary="true"></field>
+                <field name="menu_code" unique="true">buildrun.menu_item.oms_admin_check_list</field>
+                <field name="permission_code" unique="true">macula-samples-po-admin.check.findOne</field>
+            </record>
+            <record externalId="buildrun.menu_item.oms_admin_check_list_macula-samples-po-admin.check.afreshChecking">
+                <field name="id" primary="true"></field>
+                <field name="menu_code" unique="true">buildrun.menu_item.oms_admin_check_list</field>
+                <field name="permission_code" unique="true">macula-samples-po-admin.check.afreshChecking</field>
+            </record>
+            <record externalId="buildrun.menu_item.oms_admin_check_list_macula-samples-po-admin.check.successByHand">
+                <field name="id" primary="true"></field>
+                <field name="menu_code" unique="true">buildrun.menu_item.oms_admin_check_list</field>
+                <field name="permission_code" unique="true">macula-samples-po-admin.check.successByHand</field>
+            </record>
+            <!--订单处理流程菜单-->
+            <record externalId="buildrun.menu_item.oms_admin_order_process_list_buildrun.route.menu_item.oms_admin_order_process_list">
+                <field name="id" primary="true"></field>
+                <field name="menu_code" unique="true">buildrun.menu_item.oms_admin_order_process_list</field>
+                <field name="permission_code" unique="true">buildrun.route.menu_item.oms_admin_order_process_list
+                </field>
+            </record>
+
+            <record externalId="buildrun.menu_item.oms_admin_order_process_list_macula-samples-po-admin.query_order.orderProcessPage">
+                <field name="id" primary="true"></field>
+                <field name="menu_code" unique="true">buildrun.menu_item.oms_admin_order_process_list</field>
+                <field name="permission_code" unique="true">macula-samples-po-admin.query_order.orderProcessPage</field>
+            </record>
+            <record externalId="buildrun.menu_item.oms_admin_order_process_list_macula-samples-po-admin.query_order.orderProcessDetail">
+                <field name="id" primary="true"></field>
+                <field name="menu_code" unique="true">buildrun.menu_item.oms_admin_order_process_list</field>
+                <field name="permission_code" unique="true">macula-samples-po-admin.query_order.orderProcessDetail</field>
+            </record>
+            <record externalId="buildrun.menu_item.oms_admin_order_process_list_macula-samples-po-admin.query_order.findMcSerInvokeLog">
+                <field name="id" primary="true"></field>
+                <field name="menu_code" unique="true">buildrun.menu_item.oms_admin_order_process_list</field>
+                <field name="permission_code" unique="true">macula-samples-po-admin.query_order.findMcSerInvokeLog</field>
+            </record>
+            <!--订单控制中心-->
+            <record externalId="buildrun.menu_item.oms_admin_process_control_list_buildrun.route.menu_item.oms_admin_process_control_list">
+                <field name="id" primary="true"></field>
+                <field name="menu_code" unique="true">buildrun.menu_item.oms_admin_process_control_list</field>
+                <field name="permission_code" unique="true">buildrun.route.menu_item.oms_admin_process_control_list
+                </field>
+            </record>
+            <record externalId="buildrun.menu_item.oms_admin_process_control_list_macula-samples-po-admin.order_control.getList">
+                <field name="id" primary="true"></field>
+                <field name="menu_code" unique="true">buildrun.menu_item.oms_admin_process_control_list</field>
+                <field name="permission_code" unique="true">macula-samples-po-admin.order_control.getList</field>
+            </record>
+            <record externalId="buildrun.menu_item.oms_admin_process_control_list_macula-samples-po-admin.order_control.updateById">
+                <field name="id" primary="true"></field>
+                <field name="menu_code" unique="true">buildrun.menu_item.oms_admin_process_control_list</field>
+                <field name="permission_code" unique="true">macula-samples-po-admin.order_control.updateById</field>
+            </record>
+        </table>
+    </service>
+</seed>

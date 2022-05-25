@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>macula-cloud</groupId>
+		<artifactId>macula-plugins</artifactId>
+		<version>1.0.0</version>
+	</parent>
+
+	<groupId>macula-cloud</groupId>
+	<artifactId>macula-samples-po-admin</artifactId>
+	<version>1.0.0</version>
+
+	<properties>
+		<docker.registry>registry.javalabs.top</docker.registry>
+		<br.version>1.1.0-SNAPSHOT</br.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>macula-cloud</groupId>
+			<artifactId>macula-samples-po-common</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>3.17</version>
+		</dependency>
+		<dependency>
+			<groupId>io.buildrun</groupId>
+			<artifactId>buildrun-starter-asgard</artifactId>
+			<version>${br.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.buildrun</groupId>
+			<artifactId>buildrun-starter-seeddata</artifactId>
+			<version>${br.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>macula-cloud</groupId>
+			<artifactId>macula-engine-commons</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>macula-cloud</groupId>
+			<artifactId>macula-engine-security</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>macula-cloud</groupId>
+			<artifactId>macula-plugin-log</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid-spring-boot-starter</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jdbc</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-undertow</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-tomcat</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aspects</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-config</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.micrometer</groupId>
+			<artifactId>micrometer-registry-prometheus</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<finalName>app</finalName>
+		<plugins>
+			<plugin>
+				<groupId>com.github.ulisesbocchio</groupId>
+				<artifactId>jasypt-maven-plugin</artifactId>
+				<!-- mvn jasypt:encrypt -Djasypt.encryptor.password="macula@^cloud$" -Djasypt.encryptor.algorithm=PBEWithMD5AndDES -Djasypt.plugin.path="file:src/main/resources/application-default.yml" 
+					mvn jasypt:decrypt -Djasypt.encryptor.password="macula@^cloud$" -Djasypt.encryptor.algorithm=PBEWithMD5AndDES -Djasypt.plugin.path="file:src/main/resources/application-default.yml" -->
+			</plugin>
+		</plugins>
+	</build>
+
+	<repositories>
+		<repository>
+			<id>macula-maven</id>
+			<name>macula-nexus</name>
+			<url>https://nexus.javalabs.top/repository/public/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+
+</project>

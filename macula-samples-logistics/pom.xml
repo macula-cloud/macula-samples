@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>macula-cloud</groupId>
+		<artifactId>macula-samples</artifactId>
+		<version>1.0.0</version>
+	</parent>
+
+	<artifactId>macula-samples-logistics</artifactId>
+	<packaging>pom</packaging>
+	<description>Macula Samples Logistics Center</description>
+
+	<properties>
+		<oracle.version>11.2.0.3.0</oracle.version>
+		<redisson-spring-boot.version>3.12.2</redisson-spring-boot.version>
+		<scala.version>2.11.12</scala.version>
+		<scala.binary.version>2.11</scala.binary.version>
+		<flink.version>1.10.0</flink.version>
+		<hadoop.version>2.8.4</hadoop.version>
+		<docker.registry>registry.cn-shanghai.aliyuncs.com</docker.registry>
+	</properties>
+
+	<modules>
+		<module>macula-samples-logistics-common</module>
+		<module>macula-samples-logistics-gbss</module>
+		<module>macula-samples-logistics-schedule</module>
+		<module>macula-samples-logistics-api</module>
+		<module>macula-samples-logistics-log</module>
+		<module>macula-samples-logistics-admin</module>
+		<module>macula-samples-logistics-client</module>
+	</modules>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>macula-cloud</groupId>
+				<artifactId>macula-samples-logistics-common</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.redisson</groupId>
+				<artifactId>redisson-spring-boot-starter</artifactId>
+				<version>${redisson-spring-boot.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.oracle</groupId>
+				<artifactId>ojdbc6</artifactId>
+				<version>${oracle.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.flink</groupId>
+				<artifactId>flink-java</artifactId>
+				<version>${flink.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.flink</groupId>
+				<artifactId>flink-streaming-java_${scala.binary.version}</artifactId>
+				<version>${flink.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.flink</groupId>
+				<artifactId>flink-clients_${scala.binary.version}</artifactId>
+				<version>${flink.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.hadoop</groupId>
+				<artifactId>hadoop-client</artifactId>
+				<version>${hadoop.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<repositories>
+		<repository>
+			<id>macula-maven</id>
+			<name>macula-nexus</name>
+			<url>https://nexus.javalabs.top/repository/public</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+
+	<distributionManagement>
+		<repository>
+			<id>macula-maven</id>
+			<name>ReleasesProxy</name>
+			<url>https://nexus.javalabs.top/repository/releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>macula-maven</id>
+			<name>SnapshotsProxy</name>
+			<url>https://nexus.javalabs.top/repository/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+</project>

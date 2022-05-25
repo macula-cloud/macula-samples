@@ -1,0 +1,22 @@
+spring:
+   datasource:
+      url: jdbc:oracle:thin:@(DESCRIPTION=(LOAD_BALANCE=ON)(FAILOVER=ON)(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=172.20.70.36)(PORT=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=CBSD)(FAILOVER_MODE=(TYPE=SELECT)(METHOD=BASIC))))
+      username: CBSPROD2
+      password: CBSPROD2
+   druid:
+      initial-size: 0
+      max-active: 100
+      min-idle: 0
+      time-between-eviction-runs-millis: 60000
+      time-between-connect-error-millis: 500
+      min-evictable-idle-time-millis: 1800000
+      max-evictable-idle-time-millis: 25200000
+   mvc:
+      static-path-pattern: /**
+   resources:
+      static-locations: classpath:/static,classpath:/public,classpath:/resources,classpath:/META-INF/resources,file:/dist
+   redis:
+      host: 10.87.140.81
+      password: redis%%sccdev321
+      port: 6381
+      database: 5
